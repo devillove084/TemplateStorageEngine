@@ -1,0 +1,62 @@
+[package]
+name = "lsmtree"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+arrow = { version = "54.0.0", features = ["prettyprint"] }
+arrow-ord = "54.0.0"
+arrow-flight = {version = "54.0.0", features = ["flight-sql-experimental", "tls"]}
+async-trait = "0.1.56"
+async-stream = "0.3.5"
+futures = "0.3.29"
+crc32fast = "1.2.1"
+crossbeam-channel = "0.5.14"
+crossbeam-utils = "0.8.21"
+fs2 = "0.4.3"
+fxhash = "0.2.1"
+log = "0.4.20"
+num-derive = "0.4.2"
+num-traits = "0.2.18"
+quick-error = "2.0.1"
+rand = "0.8.5"
+slog = "2.5.2"
+slog-async = "2.4.0"
+slog-term = "2.5.0"
+snap = "1.0.0"
+thiserror = "2.0.9"
+tokio = { version = "1.19.2", features = ["full"] }
+tokio-stream = "0.1.15"
+crossbeam = "0.8.2"
+bumpalo = "3.11.1"
+bitflags = "2.6.0"
+tonic =  { version = "0.12.3", default-features = false, features = ["transport", "codegen", "prost"] }
+tonic-web = "0.12.3"
+bytes = "1.5.0"
+prost = { version = "0.13.4", default-features = false, features = ["prost-derive"] }
+# For Timestamp type
+prost-types = { version = "0.13.4", default-features = false }
+blink-alloc = "0.3.1"
+moka = { version = "0.12.5", features = ["future"] }
+
+[target.'cfg(not(target_env = "msvc"))'.dependencies]
+tikv-jemallocator = "0.6"
+
+[build-dependencies]
+tonic-build = "0.12.3"
+
+# [[bin]]
+# name = "memtable"
+# path = "src/bin/mem.rs"
+
+# [[bin]]
+# name = "templatedb"
+# path = "src/bin/templatedb.rs"
+
+# [[bin]]
+# name = "flight_server"
+# path = "src/bin/flight_server.rs"
+
+# [[bin]]
+# name = "flight_client"
+# path = "src/bin/flight_client.rs"

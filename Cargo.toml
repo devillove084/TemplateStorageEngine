@@ -1,11 +1,10 @@
-cargo-features = ["edition2024"]
+[workspace]
+members = [
+    "crates/bwetree",
+    "crates/lsmtree",
+]
+resolver = "2"
 
-[package]
-name = "adaptivememtable"
-version = "0.1.0"
-edition = "2024"
-
-[dependencies]
-dashmap = "6.1.0"
-bytes = { version = "1.7.2", features = ["serde"] }
-async-std = { version = "1.13.0", features = ["unstable", "attributes"] }
+[profile.release]
+lto = "fat"
+strip = "debuginfo"

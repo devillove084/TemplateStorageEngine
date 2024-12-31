@@ -1,8 +1,8 @@
 // bwe_tree.rs
 
 use super::{
-    DataDelta, DeleteDelta, DeltaNode, GarbageCollector, IndexDelta, Key, NodeType, PageID,
-    RequestType, SplitDelta, StorageManager, Value, LSN,
+    DataDelta, DeleteDelta, DeltaNode, GarbageCollector, IndexDelta, Key, LSN, NodeType, PageID,
+    RequestType, SplitDelta, StorageManager, Value,
 };
 use super::{MappingTable, MappingTableEntry};
 use super::{Page, SuspendedRequest};

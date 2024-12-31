@@ -1,4 +1,4 @@
-use super::{Key, PageID, Value, LSN};
+use super::{Key, LSN, PageID, Value};
 use std::sync::Arc;
 
 pub enum DeltaNode {

@@ -1,4 +1,4 @@
-use super::{Key, Value, LSN};
+use super::{Key, LSN, Value};
 
 pub enum RequestType {
     Insert(Key, Value, LSN),
