@@ -249,7 +249,7 @@ impl BlockHandle {
     ///
     /// # Error
     ///
-    /// If varint decoding fails, return `Status::Corruption` with relative messages
+    /// If varint decoding fails, return `Status::Corruption` with relative messages 
     #[inline]
     pub fn decode_from(src: &[u8]) -> TemplateResult<(Self, usize)> {
         if let Some((offset, n)) = VarintU64::read(src) {

@@ -1,7 +1,8 @@
 [workspace]
 members = [
     "crates/bwetree",
-    "crates/lsmtree",
+    "crates/lsmtree", 
+    "crates/resource_manager",
 ]
 resolver = "2"
 
