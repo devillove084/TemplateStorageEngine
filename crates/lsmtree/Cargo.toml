@@ -38,6 +38,7 @@ prost = { version = "0.13.4", default-features = false, features = ["prost-deriv
 prost-types = { version = "0.13.4", default-features = false }
 blink-alloc = "0.3.1"
 moka = { version = "0.12.5", features = ["future"] }
+resource_manager = { path = "../resource_manager"}
 
 [target.'cfg(not(target_env = "msvc"))'.dependencies]
 tikv-jemallocator = "0.6"

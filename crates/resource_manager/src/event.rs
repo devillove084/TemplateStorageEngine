@@ -11,6 +11,10 @@ pub trait StorageEventHappen {
     async fn read_pattern_change();
 }
 
+#[async_trait::async_trait]
+pub trait ControlHappen {
+}
+
 pub struct LSMEventNotify {
     event: LSMEvent,
     notify: Notify,

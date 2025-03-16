@@ -4,5 +4,5 @@ pub use event::*;
 mod scheduler;
 pub use scheduler::*;
 
-mod reporter;
-pub use reporter::*;
+mod global_resource_manager;
+pub use global_resource_manager::*;

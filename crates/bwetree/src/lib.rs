@@ -24,3 +24,6 @@ pub use types::*;
 
 mod tree;
 pub use tree::*;
+
+mod error;
+pub use error::*;
